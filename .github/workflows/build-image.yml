@@ -18,12 +18,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build image
-        run: docker build . --file Dockerfile --tag khssnv/greeter:latest
+        run: docker build . --file Dockerfile --tag ghcr.io/khssnv/greeter:latest
       - name: Log into registry
         run: echo "${{ secrets.CR_PAT }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
       - name: Push image
         run: |
-          docker push khssnv/greeter:latest
+          docker push ghcr.io/khssnv/greeter:latest
 
 
 

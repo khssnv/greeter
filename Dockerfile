@@ -1,5 +1,7 @@
 FROM tiangolo/uvicorn-gunicorn-fastapi:python3.8
 
+LABEL org.opencontainers.image.source="https://github.com/khssnv/greeter"
+
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 

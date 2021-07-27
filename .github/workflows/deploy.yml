@@ -9,8 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
     steps:
+      - uses: actions/checkout@v2
       - name: Build Docker image
-        uses: actions/checkout@v2
         run: docker build . --file Dockerfile --tag khassanov/greeter:latest
 
       - name: Login to Docker Hub registry

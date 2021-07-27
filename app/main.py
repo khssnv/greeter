@@ -25,5 +25,5 @@ def read_greeting(name: Optional[str] = None):
 
 @app.get('/hi')
 def read_hi():
-    print('hello')
+    print('hi')
     return {'greeting': 'hi'}

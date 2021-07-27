@@ -21,3 +21,9 @@ def read_greeting(name: Optional[str] = None):
     if name:
         return {'greeting': f'Hello, {name}!'}
     return {'greeting': 'Hello world!'}
+
+
+@app.get('/hi')
+def read_hi():
+    print('hello')
+    return {'greeting': 'hi'}
